@@ -1,0 +1,17 @@
+patient_id,name,medicine,allergy,disease
+P001,Alice Johnson,Amoxicillin,Penicillin,Bacterial Infection
+P001,Alice Johnson,Ibuprofen,,Fever
+P002,Bob Smith,Metformin,,Type 2 Diabetes
+P002,Bob Smith,Lisinopril,ACE Inhibitors,Hypertension
+P003,Carol White,Aspirin,Aspirin,Heart Disease
+P003,Carol White,Atorvastatin,,High Cholesterol
+P004,David Lee,Cetirizine,,Allergic Rhinitis
+P004,David Lee,Amoxicillin,Amoxicillin,Sinusitis
+P005,Emma Davis,Omeprazole,,GERD
+P005,Emma Davis,Warfarin,,Atrial Fibrillation
+P006,Frank Miller,Paracetamol,,Headache
+P006,Frank Miller,Codeine,Opioids,Back Pain
+P007,Grace Wilson,Insulin,,Type 1 Diabetes
+P007,Grace Wilson,Metoprolol,,Hypertension
+P008,Henry Brown,Azithromycin,Penicillin,Pneumonia
+P008,Henry Brown,Prednisone,,Asthma

@@ -1,0 +1,21 @@
+medicine,category,common_uses,risk_level,interactions
+Amoxicillin,Antibiotic,Bacterial infections,LOW,Penicillin allergy risk
+Ibuprofen,NSAID,Pain and inflammation,LOW,Avoid with blood thinners
+Metformin,Antidiabetic,Type 2 Diabetes,LOW,Kidney function monitoring needed
+Lisinopril,ACE Inhibitor,Hypertension,MEDIUM,Avoid in pregnancy
+Aspirin,NSAID,Pain/Heart protection,LOW,Bleeding risk
+Atorvastatin,Statin,High cholesterol,LOW,Liver monitoring needed
+Cetirizine,Antihistamine,Allergies,LOW,May cause drowsiness
+Omeprazole,PPI,Acid reflux,LOW,Long-term use risks
+Warfarin,Anticoagulant,Blood clots,HIGH,Many drug interactions
+Paracetamol,Analgesic,Pain and fever,LOW,Liver damage in overdose
+Codeine,Opioid,Pain relief,HIGH,Addiction risk
+Insulin,Hormone,Diabetes,MEDIUM,Hypoglycemia risk
+Metoprolol,Beta Blocker,Hypertension,MEDIUM,Do not stop suddenly
+Azithromycin,Antibiotic,Bacterial infections,LOW,QT prolongation risk
+Prednisone,Corticosteroid,Inflammation,MEDIUM,Immune suppression
+Penicillin,Antibiotic,Bacterial infections,LOW,Allergy risk
+Diazepam,Benzodiazepine,Anxiety,HIGH,Dependence risk
+Morphine,Opioid,Severe pain,HIGH,Addiction and respiratory risk
+Digoxin,Cardiac Glycoside,Heart failure,HIGH,Narrow therapeutic index
+Clopidogrel,Antiplatelet,Blood clots,MEDIUM,Bleeding risk
