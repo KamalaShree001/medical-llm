@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { PATIENTS, MEDICINES_DB } from "../data/mockData";
 import DrawToIdentify from "../components/DrawToIdentify";
 
-const API_BASE = "https://medical-llm-production-1924.up.railway.app";
+const API_BASE = "http://localhost:8000";
 
 function highlightMedicinesInText(text, medicines) {
   if (!text || medicines.length === 0) return text;
