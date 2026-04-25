@@ -3,6 +3,7 @@ import { PATIENTS, MEDICINES_DB } from "../data/mockData";
 import DrawToIdentify from "../components/DrawToIdentify";
 
 const API_BASE = "https://medical-llm-production-1924.up.railway.app";
+
 function highlightMedicinesInText(text, medicines) {
   if (!text || medicines.length === 0) return text;
   let result = text;
