@@ -5,7 +5,9 @@ from typing import Optional
 import cv2
 import numpy as np
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import os
+tesseract_path = os.environ.get("TESSERACT_CMD", "tesseract")
+pytesseract.pytesseract.tesseract_cmd = tesseract_path
 from PIL import Image
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
