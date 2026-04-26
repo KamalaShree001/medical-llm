@@ -2,7 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { PATIENTS, MEDICINES_DB } from "../data/mockData";
 import DrawToIdentify from "../components/DrawToIdentify";
 
-
+// Temporary CORS bypass for testing (only works in some browsers)
+const res = await fetch(`${API_BASE}/analyze`, { 
+  method: "POST", 
+  body: fd,
+  mode: 'cors',  // Explicitly request CORS
+  credentials: 'omit',  // Don't send cookies
+});
 const API_BASE = "https://medical-llm-1.onrender.com";
 
 function highlightMedicinesInText(text, medicines) {
