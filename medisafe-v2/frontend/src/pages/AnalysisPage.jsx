@@ -52,24 +52,33 @@ function MedicineCheckerSection({ selectedPatient }) {
     setLoading(true);
     debounceRef.current = setTimeout(async () => {
       try {
-        const res  = await fetch(`${API_BASE}/search-medicine?q=${encodeURIComponent(query)}&patient_id=${selectedPatient}`);
-        const data = await res.json();
-        setSuggestions(data.results || []);
-      } catch {
-        const q     = query.toLowerCase();
-        const patient = PATIENTS.find(p => p.id === selectedPatient);
-        const allergies = patient?.allergies || [];
-        const local = MEDICINES_DB
-          .filter(m => m.name.toLowerCase().includes(q))
-          .slice(0, 6)
-          .map(m => {
-            const conflict = allergies.some(a =>
-              m.name.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(m.name.toLowerCase())
-            );
-            return { ...m, match_score: 95, conflict, conflict_reason: conflict ? "Conflicts with known allergy" : "", risk_level: m.risk };
-          });
-        setSuggestions(local);
-      }
+  const res = await fetch(`${API_BASE}/search-medicine?q=${encodeURIComponent(query)}&patient_id=${selectedPatient}`);
+  
+  // Check if response is ok before parsing
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`);
+  }
+  
+  const data = await res.json();
+  setSuggestions(data.results || []);
+} catch (error) {
+  console.error("Fetch failed, using local data:", error); // Debugging
+  
+  // Your existing fallback logic
+  const q = query.toLowerCase();
+  const patient = PATIENTS.find(p => p.id === selectedPatient);
+  const allergies = patient?.allergies || [];
+  const local = MEDICINES_DB
+    .filter(m => m.name.toLowerCase().includes(q))
+    .slice(0, 6)
+    .map(m => {
+      const conflict = allergies.some(a =>
+        m.name.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(m.name.toLowerCase())
+      );
+      return { ...m, match_score: 95, conflict, conflict_reason: conflict ? "Conflicts with known allergy" : "", risk_level: m.risk };
+    });
+  setSuggestions(local);
+}
       setLoading(false);
     }, 280);
   }, [query, selectedPatient]);
