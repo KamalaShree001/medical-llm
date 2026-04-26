@@ -3,7 +3,7 @@ import { PATIENTS, MEDICINES_DB } from "../data/mockData";
 import DrawToIdentify from "../components/DrawToIdentify";
 
 
-const API_BASE = "https://medical-llm-production-bf9f.up.railway.app";
+const API_BASE = "https://medical-llm-production-bf9f.up.railway.app/analyze";
 
 
 fetch(`${API_BASE}/analyze`, { ... })
