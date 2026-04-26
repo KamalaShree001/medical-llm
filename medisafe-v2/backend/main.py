@@ -18,11 +18,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="MediSafe API v2", version="2.0.0")
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://medical-llm-five.vercel.app"], # Your specific frontend URL
+    allow_origins=["https://medical-llm-five.vercel.app"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"], # Explicitly add OPTIONS
     allow_headers=["*"],
 )
 
