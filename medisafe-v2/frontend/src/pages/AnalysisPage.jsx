@@ -5,9 +5,6 @@ import DrawToIdentify from "../components/DrawToIdentify";
 
 const API_BASE = "https://medical-llm-production-dc75.up.railway.app";
 
-
-fetch(`${API_BASE}/analyze`, { ... })
-
 function highlightMedicinesInText(text, medicines) {
   if (!text || medicines.length === 0) return text;
   let result = text;
